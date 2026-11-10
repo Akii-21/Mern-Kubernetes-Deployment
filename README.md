@@ -61,7 +61,7 @@ The frontend and backend images are **public on Docker Hub**, so you can run thi
 | Component | Image |
 |---|---|
 | Frontend (React/Vite) | `akii21/mern-kubernetes-deployment:frontend-v2` |
-| Backend (Node/Express) | `akii21/mern-kubernetes-deployment:backend-<tag>` |
+| Backend (Node/Express) | `akii21/mern-kubernetes-deployment:backend-v2` |
 
 Docker Hub: <https://hub.docker.com/r/akii21/mern-kubernetes-deployment>
 
@@ -69,7 +69,7 @@ Docker Hub: <https://hub.docker.com/r/akii21/mern-kubernetes-deployment>
 
 ```bash
 docker pull akii21/mern-kubernetes-deployment:frontend-v2
-docker pull akii21/mern-kubernetes-deployment:backend-<tag>
+docker pull akii21/mern-kubernetes-deployment:backend-v2
 ```
 
 The images are built for `linux/amd64` (Windows and Intel machines).
