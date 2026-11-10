@@ -92,9 +92,9 @@ kubectl get ingressclass               # should list "nginx"
 
 The `ingressClassName` in `ingress.yaml` must match the class name shown here.
 
-```
 
-**3. Create the real Secret**
+**2. Create the real Secret**
+```
 
 `secret.yaml` is deliberately not in this repo. Copy the template and fill it in with your own base64 values:
 
@@ -109,14 +109,14 @@ echo -n 'your-value' | base64
 
 Base64 is encoding, not encryption. Anyone with read access to the Secret can decode it.
 
-**4. Apply the manifests (config and storage first)**
+**3. Apply the manifests (config and storage first)**
 
 ```powershell
 kubectl apply -f secret.yaml -f configmap.yaml -f pvc.yaml
 kubectl apply -f mongo.yaml -f backend.yaml -f frontend.yaml -f ingress.yaml
 ```
 
-**5. Expose the ingress controller locally**
+**4. Expose the ingress controller locally**
 
 Leave this running in its own terminal:
 
@@ -124,7 +124,7 @@ Leave this running in its own terminal:
 kubectl port-forward -n ingress-nginx svc/ingress-nginx-controller 8080:80
 ```
 
-**6. Open the app** at <http://localhost:8080>
+**5. Open the app** at <http://localhost:8080>
 
 ## Verify it works
 
