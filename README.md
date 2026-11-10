@@ -54,6 +54,26 @@ flowchart TD
 
 React + Vite 5, Node.js + Express, MongoDB, Docker, Kubernetes (minikube), Ingress-NGINX.
 
+## Container images
+
+The frontend and backend images are **public on Docker Hub**, so you can run this project without the application source code or a local build.
+
+| Component | Image |
+|---|---|
+| Frontend (React/Vite) | `akii21/mern-kubernetes-deployment:frontend-v2` |
+| Backend (Node/Express) | `akii21/mern-kubernetes-deployment:backend-<tag>` |
+
+Docker Hub: <https://hub.docker.com/r/akii21/mern-kubernetes-deployment>
+
+`frontend.yaml` and `backend.yaml` already reference these images, and Kubernetes pulls them automatically. To pull them manually:
+
+```bash
+docker pull akii21/mern-kubernetes-deployment:frontend-v2
+docker pull akii21/mern-kubernetes-deployment:backend-<tag>
+```
+
+The images are built for `linux/amd64` (Windows and Intel machines).
+
 ## Prerequisites
 
 - Docker
