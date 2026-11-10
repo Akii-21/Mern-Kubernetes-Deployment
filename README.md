@@ -197,6 +197,5 @@ minikube stop
 ├── mongo.yaml
 ├── pvc.yaml
 ├── secret.example.yaml     # template; real secret.yaml is git-ignored
-├── INTERVIEW_PREP.md
 └── README.md
 ```
