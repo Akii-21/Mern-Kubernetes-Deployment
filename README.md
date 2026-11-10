@@ -78,7 +78,6 @@ The images are built for `linux/amd64` (Windows and Intel machines).
 
 - Docker
 - [minikube](https://minikube.sigs.k8s.io/) and `kubectl`
-- The application source code for the frontend and backend (images are built locally, see below)
 
 ## Run it
 
@@ -93,20 +92,7 @@ kubectl get ingressclass               # should list "nginx"
 
 The `ingressClassName` in `ingress.yaml` must match the class name shown here.
 
-**2. Build the images inside minikube's Docker daemon**
-
-So the cluster can use them without a registry. In the folders containing your frontend and backend Dockerfiles:
-
-```powershell
-# PowerShell
-minikube docker-env | Invoke-Expression
-# bash: eval $(minikube docker-env)
-
-docker build -t mern-frontend:v2 .      # in the frontend folder
-docker build -t mern-backend:<tag> .    # in the backend folder
 ```
-
-The image names and tags must match the `image:` fields in `frontend.yaml` and `backend.yaml`.
 
 **3. Create the real Secret**
 
