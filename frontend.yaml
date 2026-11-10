@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: mern-frontend:v2
+        image: image: akii21/mern-kubernetes-deployment:frontend-v2
         ports:
         - containerPort:  5173
 ---
