@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: mern-backend:v2
+          image: akii21/mern-kubernetes-deployment:backend-<backend-tag>
           ports:
             - containerPort: 5050
           env:
